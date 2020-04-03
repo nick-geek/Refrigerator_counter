@@ -83,11 +83,4 @@ void show(int sign)
   if (sign >= 10)  {showNumber(2, digits[2]);}
   showNumber(1, digits[3]);
   
-  
-  //Выводим значение на индикатор
-  /*
-  showNumber(4, digits[0]);
-  showNumber(3, digits[1]);
-  showNumber(2, digits[2]);
-  showNumber(1, digits[3]);*/
 }
