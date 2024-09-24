@@ -5,6 +5,7 @@
 int data_pin  = 9;   //Пин подключен к DS входу 74HC595
 int latch_pin = 10;  //Пин подключен к ST_CP входу 74HC595
 int clock_pin = 11;  //Пин подключен к SH_CP входу 74HC595
+int reset_pin = 13; 
 
 //Пины разрядов цифр
 int pins_digits[4] = {2, 3, 4, 5};
@@ -38,8 +39,8 @@ void setup() {
   pinMode(data_pin, OUTPUT);
 
   //Сборс счётчика
-  pinMode(13, INPUT);
-  if (digitalRead(13)){number_openings = 0;}
+  pinMode(reset_pin, INPUT);
+  if (digitalRead(reset_pin)){number_openings = 0;}
 
   ++number_openings;
   eeprom_write_byte (0, number_openings);
